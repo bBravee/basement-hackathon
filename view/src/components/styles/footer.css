@@ -1,0 +1,15 @@
+.footerbody{
+    background-color: #241E20;
+    padding: 1.5rem;
+    position: fixed;
+    left:0;
+    bottom:0;
+    right:0;
+}
+.footermain{
+    margin-left: auto;
+    margin-right: auto;
+    width: 28em;
+    color: #FFD800;
+    
+}
