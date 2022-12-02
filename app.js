@@ -15,9 +15,11 @@ app.use(express.json())
 // routes
 const playerRouter = require('./routes/playerRoutes')
 const tournamentRouter = require('./routes/tournamentRoutes')
+const participationRouter = require('./routes/participationRoutes')
 
 app.use('/api/v1/player', playerRouter)
 app.use('/api/v1/tournament', tournamentRouter)
+app.use('/api/v1/participation', participationRouter)
 
 app.get('/', (req, res)=>{
     res.status(StatusCodes.OK).send("piwnica")
