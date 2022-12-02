@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles/player.css';
 
-const Player = () => {
+const Player = (props) => {
     return ( 
         <div className="player">
-            <div className="player-logo"></div>
+            <div className="player-logo"><img className="player-logo-icon" src={props.img} alt={props.alt}/></div>
             <div className="player-name">Name</div>
             <div className="player-break"></div>
             <div className="player-button">Enter</div>

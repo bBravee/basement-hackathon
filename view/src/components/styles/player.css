@@ -12,15 +12,24 @@
     border-bottom-width: 5px;
     box-shadow: 10px 5px 5px rgb(58, 56, 56);
     background-color: rgb(87, 93, 87);
+    margin-bottom: 5rem;
 }
 
 .player-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 2px solid black;
     background-color: #fff;
 }
+
+.player-logo-icon {
+    width: 50%;
+}
+
 .player-name{
     font-size: 30px;
 }
