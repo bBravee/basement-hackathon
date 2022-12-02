@@ -1,5 +1,6 @@
 import React from "react"
 import Logo from "./../images/corner_logo.png"
+import './styles/navbar.css'
 
 export default function Navbar() {
     return (
@@ -12,6 +13,7 @@ export default function Navbar() {
                 <li>
                     <button type="button" class="btn btn-outline-warning btn-lg">Rejestracja</button>
                 </li>
+                <li className="vertical-rule"></li>
                 <li>
                     <button type="button" class="btn btn-outline-warning btn-lg">Zaloguj</button>
                 </li>
