@@ -1,22 +1,34 @@
 require('dotenv').config({})
-
+require('express-async-errors');
+const {StatusCodes} = require('http-status-codes')
 const express = require("express")
 const app = express()
 const path = require('path')
 
 // middleware
-
+const errorHandlerMiddleware = require('./middleware/errorHandler');
+const notFoundMiddleware = require('./middleware/notFound');
 app.use(express.json())
 
 
 
 // routes
-const teamRoutes = require('./routes/teamRouter')
-app.use('/api/v1/team', teamRoutes)
+const playerRouter = require('./routes/playerRoutes')
+const tournamentRouter = require('./routes/tournamentRoutes')
+
+app.use('/api/v1/player', playerRouter)
+app.use('/api/v1/tournament', tournamentRouter)
 
 app.get('/', (req, res)=>{
-    res.sendFile(`${__dirname}/view/index.html`)
-} )
+    res.status(StatusCodes.OK).send("piwnica")
+})
+
+
+
+app.use(errorHandlerMiddleware)
+app.use(notFoundMiddleware)
+
+
 
 const port = process.env.PORT || 3000
 const connectDB = require("./database/connect")
