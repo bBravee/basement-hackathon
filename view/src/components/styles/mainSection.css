@@ -1,8 +1,9 @@
 .mainSection{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items:center;
+    margin-top: 50px;
 }
 
 .mainSection-break{
