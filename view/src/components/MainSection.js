@@ -7,7 +7,6 @@ import Player from './Player';
 const mainSection = () => {
     return ( 
         <React.Fragment>
-        <div className="mainSection-break"></div>
         <section className='mainSection'>
             <Player/>
             <Player/>
