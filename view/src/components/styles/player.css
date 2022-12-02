@@ -12,7 +12,12 @@
     border-bottom-width: 5px;
     box-shadow: 10px 5px 5px rgb(58, 56, 56);
     background-color: rgb(87, 93, 87);
+<<<<<<< HEAD
     margin-bottom: 5rem;
+=======
+    scale:1;
+    transition: all 0.5s ease;
+>>>>>>> 0b6aafa62f2be99949965f9c41f63ca36f6607b5
 }
 
 .player-logo{
@@ -48,4 +53,9 @@
     font-size: 20px;
     line-height: 50px;
     background-color: rgb(181, 181, 181);
+}
+.player:hover{
+    cursor: pointer;
+    background-color: rgb(52, 56, 52);
+    scale: 1.1;
 }
