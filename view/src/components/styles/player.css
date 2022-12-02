@@ -1,3 +1,8 @@
+.mainSection {
+    background-color: #3d3336;
+}
+
+
 .player{
     display: flex;
     flex-direction: column;
@@ -12,12 +17,9 @@
     border-bottom-width: 5px;
     box-shadow: 10px 5px 5px rgb(58, 56, 56);
     background-color: rgb(87, 93, 87);
-<<<<<<< HEAD
     margin-bottom: 5rem;
-=======
     scale:1;
     transition: all 0.5s ease;
->>>>>>> 0b6aafa62f2be99949965f9c41f63ca36f6607b5
 }
 
 .player-logo{
@@ -31,9 +33,9 @@
     background-color: #fff;
 }
 
-.player-logo-icon {
+/* .player-logo-icon {
     width: 50%;
-}
+} */
 
 .player-name{
     font-size: 30px;
