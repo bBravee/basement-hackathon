@@ -1,52 +1,52 @@
-import React  from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles/formTournament.css';
 import './Navbar.js';
+
 
 import ApiRecive from './ApiRecive';
 
 
 
-class FormTurnament extends React.Component {
-    
-    state = { 
-        name: "",
-        number: "",
-        time: "",
-     } 
+const FormTurnament = () => {
+    const [form, setForm] = useState({name: '', start_date: '', amount_of_players: ''});
 
-     handleData = () => {
+    const handleName = event => {
+        const name = event.target.value;
+        setForm({...form, name});
+    }
 
-     }
+    const handleStart = event => {
+        const start_date = event.target.value;
+        setForm({...form, start_date});
+    }
+
+    const handleAmount = event => {
+        const amount_of_players = event.target.value;
+        setForm({...form, amount_of_players});
+    }
 
 
-        
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-
-
-
-     handleChange = (e) => {
-        const name = e.target.name;
-
-        const value = e.target.value;
-        // console.log(name,value);
-        this.setState({
-        [name]: value
-      });
-      
-      
-     }
-    render() { 
+        fetch('http://localhost:5000/api/v1/tournament', {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(form)
+        }).then(() => {
+            console.log("Data corrently sent");
+        })
+    }
+     
         return (
         <div className="formDiv">
-            <button onClick={this.handleData} className='makeTurnamentBtn'>Stwórz turniej</button>
-            <input type="text" onChange={this.handleChange} value ={this.state.name} className="nameTournament" name="name" placeholder='Wpisz nazwę turnieju..' />
-            <input type="number" onChange={this.handleChange} value ={this.state.number} className="sizeTournament" name="number" placeholder='Wybierz liczbę miejsc...' />
-            <input type="datetime-local" onChange={this.handleChange} value ={this.state.time} className="timeTournament" name="time" placeholder='wybierz godzinę...' />
-
-            <div>{this.state.name}</div>
+            <button onClick={handleSubmit} className='makeTurnamentBtn'>Stwórz turniej</button>
+            <input type="text" onChange={handleName} value ={form.name} className="nameTournament" name="name" placeholder='Wpisz nazwę turnieju..' />
+            <input type="number" onChange={handleAmount} value ={form.amount_of_players} className="sizeTournament" name="number" placeholder='Wybierz liczbę miejsc...' />
+            <input type="datetime-local" onChange={handleStart} value ={form.start_date} className="timeTournament" name="time" placeholder='wybierz godzinę...' />
         </div>
         );
     }
-}
+
  
 export default FormTurnament;

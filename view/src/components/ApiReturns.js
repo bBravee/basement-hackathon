@@ -3,6 +3,7 @@ import axios from 'axios';
 
 console.log(axios.isCancel('something'));
 
+console.log("Players");
 axios.get('http://localhost:5000/api/v1/player')
   .then(function (response) {
     // handle success
@@ -16,6 +17,11 @@ axios.get('http://localhost:5000/api/v1/player')
     // always executed
   });
 
+<<<<<<< Updated upstream
+  console.log("Tournament");
+=======
+  
+>>>>>>> Stashed changes
   axios.get('http://localhost:5000/api/v1/tournament')
   .then(function (response) {
     // handle success
@@ -28,6 +34,22 @@ axios.get('http://localhost:5000/api/v1/player')
   .finally(function () {
     // always executed
   });
+const tournament_id ="1"
+
+  axios.get(`http://localhost:5000/api/v1/game/${tournament_id}`)
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+  
+
   const baseURL = "http://localhost:5000/api/v1/player";
 
   function Users() {
