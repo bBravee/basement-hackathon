@@ -17,11 +17,8 @@ axios.get('http://localhost:5000/api/v1/player')
     // always executed
   });
 
-<<<<<<< Updated upstream
   console.log("Tournament");
-=======
   
->>>>>>> Stashed changes
   axios.get('http://localhost:5000/api/v1/tournament')
   .then(function (response) {
     // handle success
@@ -34,7 +31,7 @@ axios.get('http://localhost:5000/api/v1/player')
   .finally(function () {
     // always executed
   });
-const tournament_id ="1"
+const tournament_id="638af2f88157b2d0c2c03825"
 
   axios.get(`http://localhost:5000/api/v1/game/${tournament_id}`)
   .then(function (response) {
