@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import TournamentInfo from './components/TournamentInfo';
 import LogInForm from './components/LogInForm';
 import Testing from './components/Testing';
+import ApiReturns from './components/ApiReturns'
 
 
 ReactDOM.render(
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Route path="/info" element={<TournamentInfo />} />
     <Route path="/login" element={<LogInForm />} />
     <Route path="/testing" element={<Testing/>} />
+    <Route path="/apireturns" element={<ApiReturns/>} />
   </Routes>
   </Router>
     </React.StrictMode>,document.getElementById('root'));
