@@ -3,6 +3,7 @@ import axios from 'axios';
 
 console.log(axios.isCancel('something'));
 
+console.log("Players");
 axios.get('http://localhost:5000/api/v1/player')
   .then(function (response) {
     // handle success
@@ -16,6 +17,7 @@ axios.get('http://localhost:5000/api/v1/player')
     // always executed
   });
 
+  console.log("Tournament");
   axios.get('http://localhost:5000/api/v1/tournament')
   .then(function (response) {
     // handle success

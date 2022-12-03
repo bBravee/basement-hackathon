@@ -3,7 +3,7 @@ import "./styles/testing.css";
 import {Tournament} from "react-tournament-ready";
 
 export default function Testing() {
-  const [score, setScore] = useState(null);
+  const [score, setScore] = useState();
 
   const handleSetNewScore = () => {
     setScore({
