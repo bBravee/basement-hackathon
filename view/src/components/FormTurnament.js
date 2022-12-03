@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './styles/formTournament.css';
-import './Navbar.js';
+import Navbar from'./Navbar.js';
 
 
 import ApiRecive from './ApiRecive';
@@ -39,11 +39,14 @@ const FormTurnament = () => {
     }
      
         return (
+        <div>
+            
         <div className="formDiv">
             <button onClick={handleSubmit} className='makeTurnamentBtn'>Stwórz turniej</button>
             <input type="text" onChange={handleName} value ={form.name} className="nameTournament" name="name" placeholder='Wpisz nazwę turnieju..' />
             <input type="number" onChange={handleAmount} value ={form.amount_of_players} className="sizeTournament" name="number" placeholder='Wybierz liczbę miejsc...' />
             <input type="datetime-local" onChange={handleStart} value ={form.start_date} className="timeTournament" name="time" placeholder='wybierz godzinę...' />
+        </div>
         </div>
         );
     }

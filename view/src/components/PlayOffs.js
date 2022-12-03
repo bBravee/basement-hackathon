@@ -1,30 +1,33 @@
 import React from 'react';
 import './styles/playOffs.css';
 
+import Navbar from './Navbar.js';
+import Footer from './Footer.js';
+
+import Miecze from './../images/SwordMinecraft.png';
 
 import FormTurnament from './FormTurnament';
 import TableTournaments from './TableTournaments';
 
 const PlayOffs = () => {
-    return (  
+    return (
+        <div className="playoffs-wrapper">
+        <Navbar second={<button className="btn btn-outline-warning btn-lg">Zaloguj</button>}/>
         <section className="playOffs">
-            <div className="nameChampionship">
-                <div></div>
-                <div className="title">Nazwa Cahmpionshpis</div>
-            </div>
             <FormTurnament/>
-
             <div className="mode">
                 <p className="title">Tryb Playoffs</p>
                 <div className="logo">
-                    <img src="" alt="" />
+                    <img src={Miecze} alt="Miecze" />
                 </div>
-                <p>(?)</p>
+                {/* <p>(?)</p> */}
             </div>
 
             <TableTournaments/>
                 
         </section>
+        <Footer />
+        </div> 
     );
 }
  
