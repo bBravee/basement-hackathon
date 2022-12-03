@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import PlayOffs from './components/PlayOffs'
 import reportWebVitals from './reportWebVitals';
+import TournamentInfo from './components/TournamentInfo';
+import LogInForm from './components/LogInForm';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +16,8 @@ root.render(
 <Routes>
   <Route path="/" element={<App />} />
   <Route path="/about" element={<PlayOffs />} />
+  <Route path="/info" element={<TournamentInfo />} />
+  <Route path="/login" element={<LogInForm />} />
 </Routes>
 </Router>
   </React.StrictMode>

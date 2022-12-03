@@ -1,0 +1,34 @@
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121010;
+    color: #FFD800;
+    font-family: 'Inter', 'sans-serif';
+}
+
+.login-form {
+    width: 20%;
+    text-align: center;
+}
+
+.login-form-img {
+    width: 50%;
+}
+
+.login-form-label {
+    float: left;
+    padding-bottom: 14px;
+}
+
+.form-control {
+    background-color: #302d2d;
+}
+
+.form-control:focus {
+    border: 1px solid #FFD800;
+    background-color: #302d2d;
+    outline: 0;
+}

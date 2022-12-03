@@ -1,0 +1,22 @@
+.tournamentInfo{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+    width: 100%;
+}
+
+.back{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.rounds{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.scores{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
