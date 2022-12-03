@@ -9,12 +9,12 @@ const {
 
 
 
-router.route('/')
-    .post(createGame)
-    .get(getGames)
+
+
 
 router.route('/:id')
     .patch(updateGame)
-
+    .post(createGame)
+    .get(getGames)
     
 module.exports = router
