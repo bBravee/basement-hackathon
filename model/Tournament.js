@@ -17,11 +17,6 @@ const TournamentSchema = new mongoose.Schema({
     end_date : {
         type: Date
     },
-    tournament_type:{
-        type: String,
-        enum:['play-off', 'rankingowy'],
-        required: [true, "musisz wybrać typ turnieju"]
-    },
     judge_id: {
         type: mongoose.Types.ObjectId,
         ref: 'Player'
