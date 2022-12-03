@@ -16,8 +16,10 @@ const getGames = async ( req, res)=>{
     const games = await 
         Game.find({tournament_id: tournament_id})
             .populate({
-                path:'player_1_id',
                 path:'player_2_id'
+            })
+            .populate({
+                path:'player_1_id'
             })
 
     res.status(StatusCodes.OK).json(games)
