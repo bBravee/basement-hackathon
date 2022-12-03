@@ -4,6 +4,7 @@ import './styles/navbar.css'
 
 
 export default function Navbar(props) {
+
     return (
         <nav className="nav-wrapper">
             <div className="nav-img-wrapper">

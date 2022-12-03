@@ -4,6 +4,8 @@ import Player from './Player';
 import minecraftSword from './../images/SwordMinecraft.png';
 
 
+
+
 const mainSection = () => {
     return ( 
         <React.Fragment>
