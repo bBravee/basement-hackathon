@@ -20,7 +20,7 @@ const participationRouter = require('./routes/participationRoutes')
 const gameRouter = require('./routes/gameRoutes')
 
 app.use('/api/v1/player', playerRouter)
-app.use(authenticationMiddleware)
+// app.use(authenticationMiddleware)
 app.use('/api/v1/tournament', tournamentRouter)
 app.use('/api/v1/participation', participationRouter)
 app.use('/api/v1/game', gameRouter)
