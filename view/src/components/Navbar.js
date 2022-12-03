@@ -3,7 +3,7 @@ import Logo from "./../images/corner_logo.png"
 import './styles/navbar.css'
 
 
-export default function Navbar() {
+export default function Navbar(props) {
     return (
         <nav className="nav-wrapper">
             <div className="nav-img-wrapper">
@@ -12,11 +12,11 @@ export default function Navbar() {
             </div>
             <ul className="nav-ol">
                 <li>
-                    <button type="button" class="btn btn-outline-warning btn-lg">Rejestracja</button>
+                    <div>{props.second}</div>
                 </li>
                 <li className="vertical-rule"></li>
                 <li>
-                    <button type="button" class="btn btn-outline-warning btn-lg">Zaloguj</button>
+                    <div>{props.first}</div>
                 </li>
             </ul>
         </nav>
