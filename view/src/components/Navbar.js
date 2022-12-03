@@ -15,7 +15,9 @@ export default function Navbar(props) {
             </div>
             <ul className="nav-ol">
                 <li>
+                    <Link to="/drabinka">
                     <div>{props.second}</div>
+                    </Link>
                     <Link to="/apireturns">
                     <div>{props.third}</div>
                     </Link>

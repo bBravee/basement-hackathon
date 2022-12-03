@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar 
         first={<button className="btn btn-outline-warning btn-lg">Zaloguj</button>}
-        second={<button className="btn btn-outline-warning btn-lg">Zarejestruj</button>}
+        second={<button className="btn btn-outline-warning btn-lg">Drabinka</button>}
         third={<button className="btn btn-outline-warning btn-lg">apiReturn</button>}
 
       />

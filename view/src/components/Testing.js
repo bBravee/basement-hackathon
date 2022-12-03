@@ -7,11 +7,13 @@ export default function Testing() {
 
   const handleSetNewScore = () => {
     setScore({
-      score: 26
+      score: 100
     });
 
     //score is an object with 1 key ('score')
   };
+
+  const [form, setForm] = useState({name: '', id: ''});
 
   return (
     <div className="App123">
@@ -58,6 +60,7 @@ export default function Testing() {
         ]}
         insertScore={score}
       />
+      <input></input>
 
       <button onClick={handleSetNewScore}>Set Score</button>
     </div>

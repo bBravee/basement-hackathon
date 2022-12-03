@@ -21,6 +21,7 @@ ReactDOM.render(
     <Route path="/login" element={<LogInForm />} />
     <Route path="/testing" element={<Testing/>} />
     <Route path="/apireturns" element={<ApiReturns/>} />
+    <Route path="drabinka" element={<Testing/>} />
   </Routes>
   </Router>
     </React.StrictMode>,document.getElementById('root'));
