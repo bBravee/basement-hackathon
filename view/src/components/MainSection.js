@@ -4,8 +4,6 @@ import Player from './Player';
 import minecraftSword from './../images/SwordMinecraft.png';
 
 
-import PlayOffs from './PlayOffs';
-
 const mainSection = () => {
     return ( 
         <React.Fragment>
@@ -13,7 +11,6 @@ const mainSection = () => {
             <Player img="https://img.icons8.com/external-justicon-lineal-color-justicon/64/null/external-trophy-reward-and-badges-justicon-lineal-color-justicon-4.png" alt="playoff-icon"/>
             <Player img={minecraftSword}alt="league-icon"/>
         </section>
-        <PlayOffs/>
         </React.Fragment>
      );
 }

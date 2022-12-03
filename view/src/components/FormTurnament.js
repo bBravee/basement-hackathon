@@ -1,5 +1,6 @@
 import React  from 'react';
 import './styles/formTournament.css';
+import './Navbar.js';
 
 
 
