@@ -28,6 +28,8 @@ app.use('/api/v1/game', gameRouter)
 app.use(errorHandlerMiddleware)
 app.use(notFoundMiddleware)
 
+
+
 const port = process.env.PORT || 5000
 const connectDB = require("./database/connect")
 const start = async ()=>{

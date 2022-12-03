@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import './index.css';
 import App from './App';
@@ -7,21 +7,22 @@ import PlayOffs from './components/PlayOffs'
 import reportWebVitals from './reportWebVitals';
 import TournamentInfo from './components/TournamentInfo';
 import LogInForm from './components/LogInForm';
+import Testing from './components/Testing';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-<Router>
-<Routes>
-  <Route path="/" element={<App />} />
-  <Route path="/about" element={<PlayOffs />} />
-  <Route path="/info" element={<TournamentInfo />} />
-  <Route path="/login" element={<LogInForm />} />
-</Routes>
-</Router>
-  </React.StrictMode>
-);
+ReactDOM.render(
+<React.StrictMode>
+  <Router>
+  <Routes>
+    <Route path="/" element={<App />} />
+    <Route path="/about" element={<PlayOffs />} />
+    <Route path="/info" element={<TournamentInfo />} />
+    <Route path="/login" element={<LogInForm />} />
+    <Route path="/testing" element={<Testing/>} />
+  </Routes>
+  </Router>
+    </React.StrictMode>,document.getElementById('root'));
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
