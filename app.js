@@ -4,13 +4,13 @@ const {StatusCodes} = require('http-status-codes')
 const express = require("express")
 const app = express()
 const path = require('path')
-
+const cors = require('cors')
 // middleware
 const errorHandlerMiddleware = require('./middleware/errorHandler');
 const notFoundMiddleware = require('./middleware/notFound');
 const authenticationMiddleware = require('./middleware/authentication')
 app.use(express.json())
-
+app.use(cors())
 
 
 // routes
