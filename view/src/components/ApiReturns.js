@@ -42,11 +42,12 @@ axios.get('http://localhost:5000/api/v1/player')
   
     return (
       <div>
-        Users
+        Database : Player, found data:
         {post.map((item, i) => {
           return (
             <div key={i}>
-              <p>{item?.first_name}</p>
+              <p>First name : {item?.first_name}   FOR ID  {item?._id}</p>
+              <p></p>
             </div>
           );
         })}
