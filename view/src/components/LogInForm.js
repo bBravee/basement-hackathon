@@ -6,42 +6,30 @@ import React, {useState } from "react";
 
 export default  function LogInForm() {
 
-    const [nickname, setNickname] = useState('');
-    const [password, setPassword] = useState('');
-
-    var nickName = '';
-    var pass = '';
+    const [form, setForm] = useState({nickname: '', password: ''});
 
     const handleNick = event => {
-        const newValue = event.target.value;
-        setNickname(newValue);
-        console.log("Nick:" + newValue);
-        nickName = newValue;
+        const nickname = event.target.value;
+        setForm({...form, nickname});
+        
     }
 
     const handlePass = event => {
-        const newValue = event.target.value;
-        setPassword(newValue);
-        console.log("Pass: " + newValue);
-        pass = newValue;
+        const password = event.target.value;
+        setForm({...form, password});
     }
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const data = {
-            nickname: nickName,
-            password: pass
-        }
-        console.log(data);
+        
 
         fetch('http://localhost:5000/api/v1/player/login', {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(data)
+            body: JSON.stringify(form)
         }).then(() => {
             console.log('new data send');
-            console.log(data);
         })
     }
       
@@ -50,11 +38,11 @@ export default  function LogInForm() {
         <form className="login-form">
             <img className="login-form-img" src={Logo} alt="logo"></img>
             <div class="form-outline mb-4">
-                <input onChange={handleNick} type="email" id="form2Example1" className="form-control" value={nickname}/>
+                <input onChange={handleNick} type="email" id="form2Example1" className="form-control" value={form.nickname}/>
                 <label className="login-form-label" for="form2Example1">Nickname</label>
             </div>
             <div class="form-outline mb-4">
-                <input onChange={handlePass} type="password" id="form2Example2" className="form-control" value={password}/>
+                <input onChange={handlePass} type="password" id="form2Example2" className="form-control" value={form.password}/>
                 <label className="login-form-label" for="form2Example2">Password</label>
             </div>
         <button type="button" onClick={handleSubmit} class="btn btn-outline-warning btn-lg btn-block mb-4">Sign in</button>
