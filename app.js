@@ -8,6 +8,7 @@ const path = require('path')
 // middleware
 const errorHandlerMiddleware = require('./middleware/errorHandler');
 const notFoundMiddleware = require('./middleware/notFound');
+const authenticationMiddleware = require('./middleware/authentication')
 app.use(express.json())
 
 
@@ -16,23 +17,18 @@ app.use(express.json())
 const playerRouter = require('./routes/playerRoutes')
 const tournamentRouter = require('./routes/tournamentRoutes')
 const participationRouter = require('./routes/participationRoutes')
+const gameRouter = require('./routes/gameRoutes')
 
 app.use('/api/v1/player', playerRouter)
+app.use(authenticationMiddleware)
 app.use('/api/v1/tournament', tournamentRouter)
 app.use('/api/v1/participation', participationRouter)
-
-app.get('/', (req, res)=>{
-    res.status(StatusCodes.OK).send("piwnica")
-})
-
-
+app.use('/api/v1/game', gameRouter)
 
 app.use(errorHandlerMiddleware)
 app.use(notFoundMiddleware)
 
-
-
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 const connectDB = require("./database/connect")
 const start = async ()=>{
     try {

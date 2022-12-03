@@ -4,13 +4,17 @@ const router = express.Router()
 const {
     getPlayer,
     getPlayers,
-    createPlayer
+    register,
+    login
 } = require('../controller/playerController')
 
 
 router.route('/')
     .get(getPlayers)
-    .post(createPlayer)
+    .post(register)
+    
+router.route('/login')
+    .post(login)
 
 router.route('/:id')
     .get(getPlayer)
