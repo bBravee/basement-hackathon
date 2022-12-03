@@ -3,66 +3,63 @@ import "./styles/testing.css";
 import {Tournament} from "react-tournament-ready";
 
 export default function Testing() {
-  const [score, setScore] = useState();
 
-  const handleSetNewScore = () => {
+  const [score, setScore] = useState(null)
+
+const handleSetNewScore = () => {
+
+
+
     setScore({
+<<<<<<< Updated upstream
       score: 100
     });
+=======
+        score : 8
+    })
+>>>>>>> Stashed changes
 
     //score is an object with 1 key ('score')
-  };
+}
 
   const [form, setForm] = useState({name: '', id: ''});
 
   return (
+    
     <div className="App123">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Edit to see some magic happen!</h2>
+
       <Tournament
         team={{
-          name: "team2",
-          id: "team2ID"
+          name: "gracz1",
+          id: "1"
         }}
         teams={[
           {
-            name: "team1",
-            id: "team1ID"
+            name: "gracz1",
+            id: "1"
           },
           {
-            name: "team2",
-            id: "team2ID"
+            name: "gracz2",
+            id: "2"
           },
           {
-            name: "team3",
-            id: "team3ID"
+            name: "gracz3",
+            id: "3"
           },
           {
-            name: "team4",
-            id: "team4ID"
+            name: "gracz4",
+            id: "4"
           },
-          {
-            name: "team5",
-            id: "team5ID"
-          },
-          {
-            name: "team6",
-            id: "team6ID"
-          },
-          {
-            name: "team7",
-            id: "team7ID"
-          },
-          {
-            name: "team8",
-            id: "team8ID"
-          }
         ]}
         insertScore={score}
       />
+<<<<<<< Updated upstream
       <input></input>
 
       <button onClick={handleSetNewScore}>Set Score</button>
+=======
+<button onClick={handleSetNewScore}>Add score</button>
+>>>>>>> Stashed changes
     </div>
   );
 }
