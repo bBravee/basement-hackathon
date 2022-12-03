@@ -14,6 +14,12 @@ class FormTurnament extends React.Component {
      handleData = () => {
 
      }
+// http://localhost:5000/api/v1/tournament
+
+        
+
+
+
 
      handleChange = (e) => {
         const name = e.target.name;
