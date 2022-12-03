@@ -2,9 +2,12 @@ import React  from 'react';
 import './styles/formTournament.css';
 import './Navbar.js';
 
+import ApiRecive from './ApiRecive';
+
 
 
 class FormTurnament extends React.Component {
+    
     state = { 
         name: "",
         number: "",
@@ -14,7 +17,7 @@ class FormTurnament extends React.Component {
      handleData = () => {
 
      }
-// http://localhost:5000/api/v1/tournament
+
 
         
 
