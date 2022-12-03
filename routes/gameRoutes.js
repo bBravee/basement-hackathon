@@ -7,11 +7,6 @@ const {
     getGames
 } = require('../controller/gameController');
 
-
-
-
-
-
 router.route('/:id')
     .patch(updateGame)
     .post(createGame)
