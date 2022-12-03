@@ -1,7 +1,7 @@
 
 import './styles/LogInForm.css'
 import Logo from "./../images/corner_logo.png";
-import React, {useState } from "react";
+import React, {useState, useEffect } from "react";
 
 
 export default  function LogInForm() {
@@ -28,22 +28,23 @@ export default  function LogInForm() {
 
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const data = {
-            nickname: nickName,
-            password: pass
-        }
-        console.log(data);
+        // e.preventDefault();
+        // const data = {
+        //     nickname: nickName,
+        //     password: pass
+        // }
+        // console.log(data);
 
-        fetch('http://localhost:5000/api/v1/player/login', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(data)
-        }).then(() => {
-            console.log('new data send');
-            console.log(data);
-        })
+        // fetch('http://localhost:5000/api/v1/player/login', {
+        //     method: 'POST',
+        //     headers: { "Content-Type": "application/json"},
+        //     body: JSON.stringify(data)
+        // }).then(() => {
+        //     console.log('new data send');
+        //     console.log(data);
+        // })
     }
+
       
     return (
     <div className="login-wrapper">
