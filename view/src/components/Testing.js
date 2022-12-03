@@ -3,26 +3,15 @@ import "./styles/testing.css";
 import {Tournament} from "react-tournament-ready";
 
 export default function Testing() {
-
+  
   const [score, setScore] = useState(null)
 
 const handleSetNewScore = () => {
 
-
-
     setScore({
-<<<<<<< Updated upstream
-      score: 100
-    });
-=======
         score : 8
     })
->>>>>>> Stashed changes
-
-    //score is an object with 1 key ('score')
 }
-
-  const [form, setForm] = useState({name: '', id: ''});
 
   return (
     
@@ -53,13 +42,7 @@ const handleSetNewScore = () => {
         ]}
         insertScore={score}
       />
-<<<<<<< Updated upstream
-      <input></input>
-
-      <button onClick={handleSetNewScore}>Set Score</button>
-=======
 <button onClick={handleSetNewScore}>Add score</button>
->>>>>>> Stashed changes
     </div>
   );
 }
