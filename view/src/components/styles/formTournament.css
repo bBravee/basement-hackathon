@@ -1,0 +1,15 @@
+.formDiv{
+    height: 100%;
+    padding: 60px 0 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-items: center;
+    border-right: 2px solid black;
+}
+
+.formDiv input {
+    width: 80%;
+}

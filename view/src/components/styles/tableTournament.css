@@ -1,0 +1,8 @@
+.tableTournamentDiv{
+    border-top:2px solid black;
+    grid-column: 2/3;
+}
+.tableTournament{
+    margin: 2% 5%;
+    width: 90%;
+}
