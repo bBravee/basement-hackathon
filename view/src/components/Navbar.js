@@ -3,7 +3,8 @@ import Logo from "./../images/corner_logo.png"
 import './styles/navbar.css'
 
 
-export default function Navbar(props) {
+export default function Navbar() {
+
     return (
         <nav className="nav-wrapper">
             <div className="nav-img-wrapper">
