@@ -1,0 +1,39 @@
+.playOffs{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    grid-template-rows: 1fr 3fr;
+    height: 80vh;
+    background-color: #666;
+}
+
+.playOffs .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.makeTurnamentBtn, .joinTurnamentBtn{
+    color: yellow;
+    border: none;
+    background-color: transparent;
+}
+.makeTurnamentBtn:hover, .joinTurnamentBtn:hover{
+    cursor: pointer;
+}
+
+.mode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.nameChampionship{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
