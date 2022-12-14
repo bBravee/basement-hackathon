@@ -4,14 +4,16 @@ const router = express.Router()
 const {
     getTournament,
     createTournament,
-    getTournaments
+    getTournaments,
+    updateTournament
 } = require('../controller/tournamentController')
 
 router.route('/')
     .post(createTournament)
     .get(getTournaments)
 
-router.route('/:name')
+router.route('/:id')
     .get(getTournament)
+    .patch(updateTournament)
     
 module.exports = router
